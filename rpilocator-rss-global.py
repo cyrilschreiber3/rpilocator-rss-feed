@@ -251,19 +251,16 @@ if ONLINE_NOTIFICATION == True:
 
 # If there are entries in the feed, add entry guid to the control variable
 if f.entries:
-    logging.info('Feed contains existing entries')
+    logging.debug('Feed contains existing entries')
     for entries in f.entries:
         if INITIAL_NOTIFICATION == True:
             logging.info('INITIAL_NOTIFICATION is True, sending a message for each existing entry')
             message = formatMessage(entries)
             sendMessage(message)
-        else:
-            logging.info('Waiting for new entries')
         logging.debug('Adding entry GUID ' + entries.id + ' to control list variable')
         control.append(entries.id)
-        logging.debug('Current GUIDs in control variable: ' + str(control))
 else:
-    logging.warning('Feed contains no entries!')
+    logging.info('Feed contains no entries')
 
 #Only wait 30 seconds after initial run.
 logging.debug('Waiting 30 seconds after initial run')
@@ -278,6 +275,8 @@ while True:
     # Compare feed entries to control list.
     # If there are new entries, send a message/push
     # and add the new entry to control variable
+    logging.info('Waiting for new entries')
+
     for entries in f.entries:
         if entries.id not in control:
             logging.info('Found new entry')
