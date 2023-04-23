@@ -120,20 +120,23 @@ If you want to use the Docker Secrets feature or something similar, every variab
 
 | Variable               | Default                        | Description                                                                          |
 | ---------------------- | ------------------------------ | ------------------------------------------------------------------------------------ |
-| `NOTIFICATION_SERVICE` | `ntfy`                         | Your notification service of choice. `ntfy`, `gotify`, `pushbullet`or `pushover`     |
+| `NOTIFICATION_SERVICE` | `ntfy`                         | Your notification service of choice. `ntfy`, `gotify`, `pushbullet` or `pushover`    |
 | `NTFY_BASE_URL`        | `https://ntfy.sh`              | Base URL of your ntfy instance.                                                      |
 | `NTFY_TOPIC`           |                                | Your ntfy topic.                                                                     |
 | `NTFY_PRIORITY`        | `default`                      | Priority of the notification.                                                        |
-| `NTFY_EMOJI`           | `white_check_mark` (✅)        | Emoji to use in the notification.                                                    |
+| `NTFY_EMOJI`           | `white_check_mark` (✅)        | Emoji to use in the notification.                                                     |
 | `GOTIFY_BASE_URL`      |                                | Base URL of your Gotify server.                                                      |
 | `GOTIFY_TOKEN`         |                                | Application token of your Gotify application.                                        |
 | `GOTIFY_PRIORITY`      | `5`                            | Priority of the notification.                                                        |
 | `PUSHBULLET_TOKEN`     |                                | Access token of your Pushbullet account.                                             |
 | `PUSHOVER_KEY`         |                                | User key of your Pushover account.                                                   |
 | `PUSHOVER_API_KEY`     |                                | Application token of your Pushover application.                                      |
+| `PUSHOVER_SOUND`       |                                | Sound of the notification. `https://pushover.net/api#sound`                          |
+| `PUSHOVER_PRIORITY`    | `0`                            | Priority of the notification. `https://pushover.net/api#priority`                    |
 | `FEED_URL`             | `https://rpilocator.com/feed/` | URL of the RSS feed. `https://hwlocator.com/feed/` or `https://rpilocator.com/feed/` |
 | `INITIAL_NOTIFICATION` | `False`                        | Send a notification for every available item when the script starts.                 |
 | `ONLINE_NOTIFICATION`  | `True`                         | Send a greetings notification when the script starts.                                |
+| `LOG_LEVEL`            | `WARNING`                      | Logging level. `ERROR`, `WARNING`, `INFO` or `DEBUG`                                 |
 | `MESSAGE_TITLE`        | `Pilocator Stock Alert`        | Title of the notification.                                                           |
 | `USER_AGENT`           | `pilocator feed alert`         | User agent to use when fetching the RSS feed.                                        |
 
