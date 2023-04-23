@@ -2,7 +2,7 @@
 
 [![docker image](https://img.shields.io/docker/v/cyrilschreiber/rpilocator-rss-reader?color=red&label=docker%20image&style=for-the-badge)](https://hub.docker.com/r/cyrilschreiber/rpilocator-rss-reader/tags)
 
-This is the official `<a href="https://rpilocator.com" target="_blank">`rpilocator.com `</a>` and `<a href="https://hwlocator.com" target="_blank">`hwlocator.com `</a>` RSS feed reader and push notification scripts and Node-RED flows. The RSS feed is checked every minute and the script/flow sends a push notification when a product comes in stock.
+This is the official <a href="https://rpilocator.com" target="_blank">`rpilocator.com `</a> and <a href="https://hwlocator.com" target="_blank">`hwlocator.com `</a> RSS feed reader and push notification scripts and Node-RED flows. The RSS feed is checked every minute and the script/flow sends a push notification when a product comes in stock.
 
 Send ntfy, Pushbullet, Pushover or Gotify notifications to your device.
 
@@ -27,7 +27,7 @@ If you appreciate the work I do with rpilocator.com and hwlocatorcom consider bu
 
 ### Ntfy
 
-Download `<a href="https://ntfy.sh/">`ntfy `</a>` to your device (Android/iOS app, webapplication). Subscribe to any desired topic and insert it to the script:
+Download <a href="https://ntfy.sh/">`ntfy `</a> to your device (Android/iOS app, webapplication). Subscribe to any desired topic and insert it to the script:
 
 ```python
 NTFY_TOPIC = '<your topic here>'
@@ -131,8 +131,8 @@ If you want to use the Docker Secrets feature or something similar, every variab
 | `PUSHBULLET_TOKEN`     |                                | Access token of your Pushbullet account.                                             |
 | `PUSHOVER_KEY`         |                                | User key of your Pushover account.                                                   |
 | `PUSHOVER_API_KEY`     |                                | Application token of your Pushover application.                                      |
-| `PUSHOVER_SOUND`       |                                | Sound of the notification. `https://pushover.net/api#sound`                          |
-| `PUSHOVER_PRIORITY`    | `0`                            | Priority of the notification. `https://pushover.net/api#priority`                    |
+| `PUSHOVER_SOUND`       |                                | Sound of the notification. <a href="https://pushover.net/api#sound" target="_blank">`https://pushover.net/api#sound`</a>|
+| `PUSHOVER_PRIORITY`    | `0`                            | Priority of the notification. <a href="https://pushover.net/api#priority" target="_blank">`https://pushover.net/api#priority`</a>|
 | `FEED_URL`             | `https://rpilocator.com/feed/` | URL of the RSS feed. `https://hwlocator.com/feed/` or `https://rpilocator.com/feed/` |
 | `INITIAL_NOTIFICATION` | `False`                        | Send a notification for every available item when the script starts.                 |
 | `ONLINE_NOTIFICATION`  | `True`                         | Send a greetings notification when the script starts.                                |
@@ -150,7 +150,7 @@ docker-compose up -d
 
 ## Filters
 
-If you would like to only get notified if certain product categories come in stock in a certain country (for example), you can use the feed customizer at `<a href="https://rpilocator.com/about.cfm" target="_blank">`rpilocator.com `</a>` or `<a href="https://hwlocator.com/about.cfm" target="_blank">`hwlocator.com `</a>`.
+If you would like to only get notified if certain product categories come in stock in a certain country (for example), you can use the feed customizer at <a href="https://rpilocator.com/about.cfm" target="_blank">`rpilocator.com `</a> or <a href="https://hwlocator.com/about.cfm" target="_blank">`hwlocator.com `</a>.
 
 After customzing the feed, update the `FEED_URL` variable.
 
