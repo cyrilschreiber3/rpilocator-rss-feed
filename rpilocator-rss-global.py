@@ -275,7 +275,7 @@ while True:
     # Compare feed entries to control list.
     # If there are new entries, send a message/push
     # and add the new entry to control variable
-    logging.info('Waiting for new entries')
+    logging.debug('Waiting for new entries')
 
     for entries in f.entries:
         if entries.id not in control:
